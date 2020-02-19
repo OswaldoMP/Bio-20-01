@@ -86,6 +86,8 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
             "Registro Actualizado.",
             QMessageBox.Ok )
             self.toolBox.setCurrentIndex(2)
+            self.clearForm()
+            self.iBuscarName.setText('')
             
         else:
             confirmation = QMessageBox.question(self, "Aviso",
