@@ -29,11 +29,18 @@
          <x>0</x>
          <y>0</y>
          <width>874</width>
-         <height>441</height>
+         <height>438</height>
         </rect>
        </property>
+       <attribute name="icon">
+        <iconset>
+         <normaloff>image/1.png</normaloff>image/1.png</iconset>
+       </attribute>
        <attribute name="label">
         <string>Crear Registro.</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Nuevo Registro&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_55">
         <item row="0" column="0">
@@ -2617,11 +2624,18 @@
          <x>0</x>
          <y>0</y>
          <width>874</width>
-         <height>441</height>
+         <height>438</height>
         </rect>
        </property>
+       <attribute name="icon">
+        <iconset>
+         <normaloff>image/2.png</normaloff>image/2.png</iconset>
+       </attribute>
        <attribute name="label">
         <string>Buscar Registro.</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Buscar Registro.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
@@ -2660,7 +2674,7 @@
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-660</y>
+             <y>0</y>
              <width>840</width>
              <height>2064</height>
             </rect>
@@ -5392,14 +5406,21 @@
          <x>0</x>
          <y>0</y>
          <width>874</width>
-         <height>441</height>
+         <height>438</height>
         </rect>
        </property>
        <property name="cursor">
         <cursorShape>ArrowCursor</cursorShape>
        </property>
+       <attribute name="icon">
+        <iconset>
+         <normaloff>image/3.png</normaloff>image/3.png</iconset>
+       </attribute>
        <attribute name="label">
         <string>Principal.</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Inicio.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </attribute>
       </widget>
      </widget>
@@ -5418,12 +5439,15 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="ic1.qrc"/>
+  <include location="ic2.qrc"/>
+ </resources>
  <connections/>
  <buttongroups>
   <buttongroup name="buttonGroup_2"/>
-  <buttongroup name="buttonGroup"/>
   <buttongroup name="buttonGroup_3"/>
   <buttongroup name="buttonGroup_4"/>
+  <buttongroup name="buttonGroup"/>
  </buttongroups>
 </ui>

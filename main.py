@@ -1,5 +1,4 @@
 from mainWindow import *
-from confirmationWindow import *
 import sqlite3
 import datetime as dt
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMessageBox
@@ -13,7 +12,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         # Establecer la Conección de la base de datos
         dataBase, connectDB = self.connectionDataBase()
         # self.createTable(dataBase)#En que la base de datos sea nueva, Descomentar para crear la tabla.
-        
+
         self.setupUi(self)
         # Funcionamiento de los botones
         self.bGuardReg.clicked.connect(self.saveUser)
@@ -26,11 +25,11 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
     def saveUser(self):
         global dataBase, connectDB
         # Obtener los datos de la interfaz
-        values = self.getDataFrom()
-        
+        values = self.getDataForm()
+
         # Sql de insert a SqLite
         sql = 'INSERT INTO users (name,edad,genero,fecha,peso,talla,hora,areaTrabajo,timpoLabora,habitos,actividad,tiempoRiesgo,medicamento,dolorMano,dolorManoDer,dolorManoIzq,dolorManoInt,dolorManoFcia,dolorManoLocal,dolorManoIrrad,dolorCuello,dolorCuello2,dolorCuello3,dolorCuello4,dolorCuello5,dolorCuello6,dolorCuello7,dolorHombro,dolorHombro2,dolorHombro3,dolorHombro4,dolorHombro5,dolorHombro6,dolorHombro7,dolorEspalda,dolorEspalda2,dolorEspalda3,dolorEspalda4,dolorEspalda5,dolorEspalda6,dolorEspalda7,adormeMano,adormeMano2,adormeMano3,adormeMano4,adormeMano5,adormeMano6,adormeMano7,dismiMovMano,dismiMovMano2,dismiMovMano3,dismiMovMano4,dismiMovMano5,dismiMovMano6,dismiMovMano7,perdidaFuMano,perdidaFuMano2,perdidaFuMano3,perdidaFuMano4,perdidaFuMano5,perdidaFuMano6,perdidaFuMano7,torpeMano,torpeMano2,torpeMano3,torpeMano4,torpeMano5,torpeMano6,torpeMano7,senExMano,senExMano2,senExMano3,senExMano4,senExMano5,senExMano6,senExMano7,otrosMole,obserDefor,obserInf,obserAtro,obserCam,dmMusBrazoDer,dmMusBrazoIzq,dmMusAnBrazoDer,dmMusAnBrazoIzq,rMFleCD,rMFleCI,rMFleHD,rMFleHI,rMFleCoD,rMFleCoI,rMFleMD,rMFleMI,rMFleDD,rMFleDI,rMExtCD,rMExtCI,rMExtHD,rMExtHI,rMExtCoD,rMExtCoI,rMExtMD,rMExtMI,rMExtDD,rMExtDI,rMAdbCD,rMAdbCI,rMAdbHD,rMAdbHI,rMAdbCoD,rMAdbCoI,rMAdbMD,rMAdbMI,rMAdbDD,rMAdbDI,rMAduCD,rMAduCI,rMAduHD,rMAduHI,rMAduCoD,rMAduCoI,rMAduMD,rMAduMI,rMAduDD,rMAduDI,rMRotExtCD,rMRotExtCI,rMRotExtHD,rMRotExtHI,rMRotExtCoD,rMRotExtCoI,rMRotExtMD,rMRotExtMI,rMRotExtDD,rMRotExtDI,rMRotInCD,rMRotInCI,rMRotInHD,rMRotInHI,rMRotInCoD,rMRotInCoI,rMRotInMD,rMRotInMI,rMRotInDD,rMRotInDI,rFMPrePalmaD,rFMPrePalmaI,rFMPreDigD,rFMPreDigI,rSenPMonoD,rSenPMonoI,rSenVibroD,rSenVibroI,rSenDisD,rSenDisI,sESFlickD,sESFlickI,sESPhallenD,sESPhallenI,sESTinelD,sESTinelI,sESCirculoD,sESCirculoI,eCerviRes,eCerviTRes,eCerviOcc,eCerviC1,eCerviC2,eCerviC3,eCerviC4,eCerviC5,eCerviC6,eCerviC7,eDorsPiRod,eDorsPreDir,eDorsPreLat,eDorsPreAD,eIliacosTPie,eIliacosTPos,eIliacosEias,eIliacosTAlar,eIliacosTAcor,eSacroTArSen,eSacroTRot,eSacroTLat,eSacroTAcor,eLumbarPiRod,eLumbarPreDir,eLumbarPreLat,eLumbarPreAD) VALUES ( ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ? ) '
-        
+
         #Ventana de Confirmación
         confirmation = QMessageBox.question(self, "Confirmación",
         "Hago constar que la información \n contenida en este documento es verdadera.",
@@ -38,7 +37,10 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         if confirmation == QMessageBox.Ok:
             # Insertando Datos a la base de datos
             self.insertInto(dataBase,connectDB,sql,values)
-            self.clearFromRegistre()
+            self.clearFormRegistre()
+            print('Create Regisre')
+            # Ir al inicio
+            self.toolBox.setCurrentIndex(2)
             print(values)
         else:
             #Borrar Datos del form
@@ -52,23 +54,35 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         sql = 'SELECT * FROM users WHERE name = ' +"'"+register +"'"
 
         # Busqueda por Id, folio, Descomenar
-        # sql = 'SELECT * FROM users WHERE name = ' +register 
+        # sql = 'SELECT * FROM users WHERE name = ' +register
         data = self.selectId(dataBase,connectDB,sql)
         try:
             if data[0]:
                 bandera = False
-                self.viewDataFrom(data)
+                self.viewDataForm(data)
+            else:
+                print('Introduzca')
         except:
             if  bandera:
                 confirmation = QMessageBox.question(self, "Aviso",
                 "Registro No Encontrado.",
                 QMessageBox.Ok )
-                
+                self.clearForm()
+
     def updateId(self):
         global dataBase, connectDB
         id = self.iId.text()
+        # self.toolBox.setCurrentIndex(2)
         if id:
+
             print('actualizar')
+            sql = self.getFormDataToUpdate()
+            dataBase.execute(sql)
+            connectDB.commit()
+            confirmation = QMessageBox.question(self, "Aviso",
+            "Registro Actualizado.",
+            QMessageBox.Ok )
+            
         else:
             confirmation = QMessageBox.question(self, "Aviso",
             "No hay registro que editar. \n Busque un registro.",
@@ -89,10 +103,16 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
                 sql = 'DELETE FROM users WHERE id = ' + id
                 dataBase.execute(sql)
                 connectDB.commit()
-                self.clearFrom()
-                print('Delete Data')
+                self.clearForm()
+                self.bBuscar.setText('')
+                confirmation = QMessageBox.question(self, "Aviso",
+                "Registro Eliminado.",
+                QMessageBox.Ok )
+                # Ir al inicio
+                self.toolBox.setCurrentIndex(2)
+                print('Delete Registre')
             else:
-                self.clearFrom()
+                self.clearForm()
                 pass
         else:
             confirmation = QMessageBox.question(self, "Aviso",
@@ -114,7 +134,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         return data
         pass
 
-    def getDataFrom(self):
+    def getDataForm(self):
         name = self.iName.text()
         edad = self.iEdad.text()
         genero = self.iGenero.currentText()
@@ -143,7 +163,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         dolorCuello5 = self.iDolorCuelloFcia.isChecked()
         dolorCuello6 = self.iDolorCuelloLocal.isChecked()
         dolorCuello7 = self.iDolorCuelloIrrad.isChecked()
-        
+
         dolorHombro = self.iDolorHombro.isChecked()
         dolorHombro2 = self.iDolorHombroDer.isChecked()
         dolorHombro3 = self.iDolorHombroIzq.isChecked()
@@ -201,7 +221,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         senExMano7 = self.iSensaManoIrrad.isChecked()
 
         otrosMole = self.iOtroMolestia.text()
-        
+
         obserDefor = self.iExObDeforSi.isChecked()
         obserInf = self.iExObInflaSi.isChecked()
         obserAtro = self.iExObAtroSi.isChecked()
@@ -534,7 +554,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
     def str2bool(self,v):
         return str(v).lower() in ("1")
 
-    def viewDataFrom(self,data):
+    def viewDataForm(self,data):
         self.iId.setText(str(data[0]))
         self.iName_3.setText(data[1])
         self.iEdad_3.setText(data[2])
@@ -758,7 +778,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         self.iEvaLumbarPreLater_3.setText(data[189])
         self.iEvaLumbarPreAD_3.setText(data[190])
 
-    def clearFrom(self):
+    def clearForm(self):
         self.iId .setText('')
         self.iName_3.setText('')
         self.iEdad_3.setText('')
@@ -982,7 +1002,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         self.iEvaLumbarPreLater_3.setText('')
         self.iEvaLumbarPreAD_3.setText('')
 
-    def clearFromRegistre(self):
+    def clearFormRegistre(self):
         self.iName.setText('')
         self.iEdad.setText('')
         # aux = self.iGenero.findText(None)
@@ -1205,6 +1225,202 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         self.iEvaLumbarPreLater.setText('')
         self.iEvaLumbarPreAD.setText('')
 
+    def getFormDataToUpdate(self):
+
+        sql = f'''UPDATE users SET
+        name = '{self.iName_3.text()}'
+        ,edad = '{self.iEdad_3.text()}'
+        ,genero = '{self.iGenero.currentText()}'
+        ,fecha = '{self.inpFecha.text()}'
+        ,peso = '{self.inpPeso.text()}'
+        ,talla = '{self.iTalla_3.value()}'
+        ,hora = '{self.inpHora.text()}'
+        ,areaTrabajo = '{self.iAreaTrabajo_3.text()}'
+        ,timpoLabora = '{self.iTiempoLabor_3.text()}'
+        ,habitos = '{self.iHabitos_3.text()}'
+        ,actividad = '{self.iActividad_3.text()}'
+        ,tiempoRiesgo = '{self.iTiempoRiesgo_3.text()}'
+        ,medicamento = '{self.iMedicamento_3.text()}'
+        ,dolorMano = '{self.iDolorMano_3.isChecked()}'
+        ,dolorManoDer = '{self.iDolorManoDer_3.isChecked()}'
+        ,dolorManoIzq = '{self.iDolorManoIzq_3.isChecked()}'
+        ,dolorManoInt = '{self.iDolorManoInt_3.isChecked()}'
+        ,dolorManoFcia = '{self.iDolorManoFcia_3.isChecked()}'
+        ,dolorManoLocal = '{self.iDolorManoLocal_3.isChecked()}'
+        ,dolorManoIrrad = '{self.iDolorManoIrrad_3.isChecked()}'
+        ,dolorCuello = '{self.iDolorCuello_3.isChecked()}'
+        ,dolorCuello2 = '{self.iDolorCuelloDer_3.isChecked()}'
+        ,dolorCuello3 = '{self.iDolorCuelloIzq_3.isChecked()}'
+        ,dolorCuello4 = '{self.iDolorCuelloInt_3.isChecked()}'
+        ,dolorCuello5 = '{self.iDolorCuelloFcia_3.isChecked()}'
+        ,dolorCuello6 = '{self.iDolorCuelloLocal_3.isChecked()}'
+        ,dolorCuello7 = '{self.iDolorCuelloIrrad_3.isChecked()}'
+        ,dolorHombro = '{self.iDolorHombro_3.isChecked()}'
+        ,dolorHombro2 = '{self.iDolorHombroDer_3.isChecked()}'
+        ,dolorHombro3 = '{self.iDolorHombroIzq_3.isChecked()}'
+        ,dolorHombro4 = '{self.iDolorHombroInt_3.isChecked()}'
+        ,dolorHombro5 = '{self.iDolorHombroFcia_3.isChecked()}'
+        ,dolorHombro6 = '{self.iDolorHombroLocal_3.isChecked()}'
+        ,dolorHombro7 = '{self.iDolorHombroIrrad_3.isChecked()}'
+        ,dolorEspalda = '{self.iDolorEspalda_3.isChecked()}'
+        ,dolorEspalda2 = '{self.iDolorEspaldaDer_3.isChecked()}'
+        ,dolorEspalda3 = '{self.iDolorEspaldaIzq_3.isChecked()}'
+        ,dolorEspalda4 = '{self.iDolorEspaldaInt_3.isChecked()}'
+        ,dolorEspalda5 = '{self.iDolorEspaldaFcia_3.isChecked()}'
+        ,dolorEspalda6 = '{self.iDolorEspaldaLocal_3.isChecked()}'
+        ,dolorEspalda7 = '{self.iDolorEspaldaIrrad_3.isChecked()}'
+        ,adormeMano = '{self.iAdormeManos_3.isChecked()}'
+        ,adormeMano2 = '{self.iAdormeManosDer_3.isChecked()}'
+        ,adormeMano3 = '{self.iAdormeManosIzq_3.isChecked()}'
+        ,adormeMano4 = '{self.iAdormeManosInt_3.isChecked()}'
+        ,adormeMano5 = '{self.iAdormeManosFcia_3.isChecked()}'
+        ,adormeMano6 = '{self.iAdormeManosLocal_3.isChecked()}'
+        ,adormeMano7 = '{self.iAdormeManosIrrad_3.isChecked()}'
+        ,dismiMovMano = '{self.iDismiManos_6.isChecked()}'
+        ,dismiMovMano2 = '{self.iDismiManos_5.isChecked()}'
+        ,dismiMovMano3 = '{self.iDismiManosIzq_3.isChecked()}'
+        ,dismiMovMano4 = '{self.iDismiManosInt_3.isChecked()}'
+        ,dismiMovMano5 = '{self.iDismiManosFcia_3.isChecked()}'
+        ,dismiMovMano6 = '{self.iDismiManosLocal_3.isChecked()}'
+        ,dismiMovMano7 = '{self.iDismiManosIrrad_3.isChecked()}'
+        ,perdidaFuMano = '{self.iPerdidaManos_3.isChecked()}'
+        ,perdidaFuMano2 = '{self.iPerdidaManosDer_3.isChecked()}'
+        ,perdidaFuMano3 = '{self.iPerdidaManosIzq_3.isChecked()}'
+        ,perdidaFuMano4 = '{self.iPerdidaManosInt_3.isChecked()}'
+        ,perdidaFuMano5 = '{self.iPerdidaManosFcia_3.isChecked()}'
+        ,perdidaFuMano6 = '{self.iPerdidaManosLocal_3.isChecked()}'
+        ,perdidaFuMano7 = '{self.iPerdidaManosIrrad_3.isChecked()}'
+        ,torpeMano = '{self.iTorpezaMano_3.isChecked()}'
+        ,torpeMano2 = '{self.iTorpezaManoDer_3.isChecked()}'
+        ,torpeMano3 = '{self.iTorpezaManoIzq_3.isChecked()}'
+        ,torpeMano4 = '{self.iTorpezaManoInt_3.isChecked()}'
+        ,torpeMano5 = '{self.iTorpezaManoFcia_3.isChecked()}'
+        ,torpeMano6 = '{self.iTorpezaManoLocal_3.isChecked()}'
+        ,torpeMano7 = '{self.iTorpezaManoIrrad_3.isChecked()}'
+        ,senExMano = '{self.iSensaMano_3.isChecked()}'
+        ,senExMano2 = '{self.iSensaManoDer_3.isChecked()}'
+        ,senExMano3 = '{self.iSensaManoIzq_3.isChecked()}'
+        ,senExMano4 = '{self.iSensaManoInt_3.isChecked()}'
+        ,senExMano5 = '{self.iSensaManoFcia_3.isChecked()}'
+        ,senExMano6 = '{self.iSensaManoLocal_3.isChecked()}'
+        ,senExMano7 = '{self.iSensaManoIrrad_3.isChecked()}'
+        ,otrosMole = '{self.iOtroMolestia_3.text()}'
+        ,obserDefor = '{self.iExObDeforSi_3.isChecked()}'
+        ,obserInf = '{self.iExObInflaSi_3.isChecked()}'
+        ,obserAtro = '{self.iExObAtroSi_3.isChecked()}'
+        ,obserCam = '{self.iExObColoSi_5.isChecked()}'
+        ,dmMusBrazoDer = '{self.iExDMusBrazoDer.value()}'
+        ,dmMusBrazoIzq = '{self.iExDMusBrazoIzq.value()}'
+        ,dmMusAnBrazoDer = '{self.iExDMusAnteBrazoDer.value()}'
+        ,dmMusAnBrazoIzq = '{self.iExDMusAnteBrazoIzq.value()}'
+        ,rMFleCD = '{self.iExRMovFlexCuelloDer_3.text()}'
+        ,rMFleCI = '{self.iExRMovFlexCuelloIzq_3.text()}'
+        ,rMFleHD = '{self.iExRMovFlexHombroDer_3.text()}'
+        ,rMFleHI = '{self.iExRMovFlexHombroIzq_3.text()}'
+        ,rMFleCoD = '{self.iExRMovFlexCodoDer_3.text()}'
+        ,rMFleCoI = '{self.iExRMovFlexCodoIzq_3.text()}'
+        ,rMFleMD = '{self.iExRMovFlexMunecaDer_3.text()}'
+        ,rMFleMI = '{self.iExRMovFlexMunecaIzq_3.text()}'
+        ,rMFleDD = '{self.iExRMovFlexDedoDer_3.text()}'
+        ,rMFleDI = '{self.iExRMovFlexDedoIzq_3.text()}'
+        ,rMExtCD = '{self.iExRMovExtCuelloDer_3.text()}'
+        ,rMExtCI = '{self.iExRMovExtCuelloIzq_3.text()}'
+        ,rMExtHD = '{self.iExRMovExtHombroDer_3.text()}'
+        ,rMExtHI = '{self.iExRMovExtHombroIzq_3.text()}'
+        ,rMExtCoD = '{self.iExRMovExtCodoDer_3.text()}'
+        ,rMExtCoI = '{self.iExRMovExtCodoIzq_3.text()}'
+        ,rMExtMD = '{self.iExRMovExtMunecaDer_3.text()}'
+        ,rMExtMI = '{self.iExRMovExtMunecaIzq_3.text()}'
+        ,rMExtDD = '{self.iExRMovExtDedoDer_3.text()}'
+        ,rMExtDI = '{self.iExRMovExtDedoIzq_3.text()}'
+        ,rMAdbCD = '{self.iExRMovAdbCuelloDer_3.text()}'
+        ,rMAdbCI = '{self.iExRMovAdbCuelloIzq_3.text()}'
+        ,rMAdbHD = '{self.iExRMovAdbHombroDer_3.text()}'
+        ,rMAdbHI = '{self.iExRMovAdbHombroIzq_3.text()}'
+        ,rMAdbCoD = '{self.iExRMovAdbCodoDer_3.text()}'
+        ,rMAdbCoI = '{self.iExRMovAdbCodoIzq_3.text()}'
+        ,rMAdbMD = '{self.iExRMovAdbMunecaDer_3.text()}'
+        ,rMAdbMI = '{self.iExRMovAdbMunecaIzq_3.text()}'
+        ,rMAdbDD = '{self.iExRMovAdbDedoDer_3.text()}'
+        ,rMAdbDI = '{self.iExRMovAdbDedoIzq_3.text()}'
+        ,rMAduCD = '{self.iExRMovAduCuelloDer_3.text()}'
+        ,rMAduCI = '{self.iExRMovAduCuelloIzq_3.text()}'
+        ,rMAduHD = '{self.iExRMovAduHombroDer_3.text()}'
+        ,rMAduHI = '{self.iExRMovAduHombroIzq_3.text()}'
+        ,rMAduCoD = '{self.iExRMovAduCodoDer_3.text()}'
+        ,rMAduCoI = '{self.iExRMovAduCodoIzq_3.text()}'
+        ,rMAduMD = '{self.iExRMovAduMunecaDer_3.text()}'
+        ,rMAduMI = '{self.iExRMovAduMunecaIzq_3.text()}'
+        ,rMAduDD = '{self.iExRMovAduDedoDer_3.text()}'
+        ,rMAduDI = '{self.iExRMovAduDedoIzq_3.text()}'
+        ,rMRotExtCD = '{self.iExRMovRotaExCuelloDer_3.text()}'
+        ,rMRotExtCI = '{self.iExRMovRotaExCuelloIzq_3.text()}'
+        ,rMRotExtHD = '{self.iExRMovRotaExHombroDer_3.text()}'
+        ,rMRotExtHI = '{self.iExRMovRotaExHombroIzq_3.text()}'
+        ,rMRotExtCoD = '{self.iExRMovRotaExCodoDer_3.text()}'
+        ,rMRotExtCoI = '{self.iExRMovRotaExCodoIzq_3.text()}'
+        ,rMRotExtMD = '{self.iExRMovRotaExMunecaDer_3.text()}'
+        ,rMRotExtMI = '{self.iExRMovRotaExMunecaIzq_3.text()}'
+        ,rMRotExtDD = '{self.iExRMovRotaExDedoDer_3.text()}'
+        ,rMRotExtDI = '{self.iExRMovRotaExDedoIzq_3.text()}'
+        ,rMRotInCD = '{self.iExRMovRotaIntCuelloDer_3.text()}'
+        ,rMRotInCI = '{self.iExRMovRotaIntCuelloIzq_3.text()}'
+        ,rMRotInHD = '{self.iExRMovRotaIntHombroDer_3.text()}'
+        ,rMRotInHI = '{self.iExRMovRotaIntHombroIzq_3.text()}'
+        ,rMRotInCoD = '{self.iExRMovRotaIntCodoDer_3.text()}'
+        ,rMRotInCoI = '{self.iExRMovRotaIntCodoizq_3.text()}'
+        ,rMRotInMD = '{self.iExRMovRotaIntMunecaDer_3.text()}'
+        ,rMRotInMI = '{self.iExRMovRotaIntMunecaIzq_3.text()}'
+        ,rMRotInDD = '{self.iExRMovRotaIntDedoDer_3.text()}'
+        ,rMRotInDI = '{self.iExRMovRotaIntDedoIzq_3.text()}'
+        ,rFMPrePalmaD = '{self.iExFMusPrePalmaDer_3.text()}'
+        ,rFMPrePalmaI = '{self.iExFMusPrePalmaIzq_3.text()}'
+        ,rFMPreDigD = '{self.iExFMusPreDigDer_3.text()}'
+        ,rFMPreDigI = '{self.iExFMusPreDigIzq_3.text()}'
+        ,rSenPMonoD = '{self.iExSenPMonoMDer_3.text()}'
+        ,rSenPMonoI = '{self.iExSenPMonoMIzq_3.text()}'
+        ,rSenVibroD = '{self.iExSenVibroMDer_3.text()}'
+        ,rSenVibroI = '{self.iExSenVibroMIzq_3.text()}'
+        ,rSenDisD = '{self.iExSenDTextuMDer_3.text()}'
+        ,rSenDisI = '{self.iExSenDTextuMIzq_3.text()}'
+        ,sESFlickD = '{self.iExSigEspSFlickDer_3.text()}'
+        ,sESFlickI = '{self.iExSigEspSFlickIzq_3.text()}'
+        ,sESPhallenD = '{self.iExSigEspSPhallenDer_3.text()}'
+        ,sESPhallenI = '{self.iExSigEspSPhallenIzq_3.text()}'
+        ,sESTinelD = '{self.iExSigEspSTinelDer_3.text()}'
+        ,sESTinelI = '{self.iExSigEspSTinelIzq_3.text()}'
+        ,sEsCirculoD = '{self.iExSigEspSCirculoDer_3.text()}'
+        ,sEsCirculoI = '{self.iExSigEspSCirculoIzq_3.text()}'
+        ,eCerviRes = '{self.iEvaCerviRespi_3.text()}'
+        ,eCerviTRes = '{self.iEvaCerviTArCervi_3.text()}'
+        ,eCerviOcc = '{self.iEvaCerviAOcc_3.text()}'
+        ,eCerviC1 = '{self.iEvaCerviC1_3.text()}'
+        ,eCerviC2 = '{self.iEvaCerviC2_3.text()}'
+        ,eCerviC3 = '{self.iEvaCerviC3_3.text()}'
+        ,eCerviC4 = '{self.iEvaCerviC4_3.text()}'
+        ,eCerviC5 = '{self.iEvaCerviC5_3.text()}'
+        ,eCerviC6 = '{self.iEvaCerviC6_3.text()}'
+        ,eCerviC7 = '{self.iEvaCerviC7_3.text()}'
+        ,eDorsPiRod = '{self.iEvaDorPinRod_3.text()}'
+        ,eDorsPreDir = '{self.iEvaDorPreDirec_3.text()}'
+        ,eDorsPreLat = '{self.iEvaDorPreLat_3.text()}'
+        ,eDorsPreAD = '{self.iEvaDorPreAD_3.text()}'
+        ,eIliacosTPie = '{self.iEvaIliaTArPie_3.text()}'
+        ,eIliacosTPos = '{self.iEvaIliaTPos_3.text()}'
+        ,eIliacosEias = '{self.iEvaIliaEias_3.text()}'
+        ,eIliacosTAlar = '{self.iEvaIliaTAlarga_3.text()}'
+        ,eIliacosTAcor = '{self.iEvaIliaTAcor_3.text()}'
+        ,eSacroTArSen = '{self.iEvaSacroTArSentado_3.text()}'
+        ,eSacroTRot = '{self.iEvaSacroTRota_3.text()}'
+        ,eSacroTLat = '{self.iEvaSacroTLater_3.text()}'
+        ,eSacroTAcor = '{self.iEvaSacroTAcor_3.text()}'
+        ,eLumbarPiRod = '{self.iEvaLumbarPinRoda_3.text()}'
+        ,eLumbarPreDir = '{self.iEvaLumbarPreDirec_3.text()}'
+        ,eLumbarPreLat = '{self.iEvaLumbarPreLater_3.text()}'
+        ,eLumbarPreAD = '{self.iEvaLumbarPreAD_3.text()}' WHERE id = {self.iId.text()}'''
+
+        return sql
+
 
     def connectionDataBase(self):
         try:
@@ -1223,8 +1439,8 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         dataBase.execute('CREATE TABLE users(id integer PRIMARY KEY, name text, edad text, genero text, fecha text, peso text, talla text, hora text, areaTrabajo text, timpoLabora text, habitos text, actividad text, tiempoRiesgo text, medicamento text, dolorMano text, dolorManoDer text, dolorManoIzq text, dolorManoInt text, dolorManoFcia text, dolorManoLocal text, dolorManoIrrad text, dolorCuello text, dolorCuello2 text, dolorCuello3 text, dolorCuello4 text, dolorCuello5 text, dolorCuello6 text, dolorCuello7 text, dolorHombro text, dolorHombro2 text, dolorHombro3 text, dolorHombro4 text, dolorHombro5 text, dolorHombro6 text, dolorHombro7 text, dolorEspalda text, dolorEspalda2 text, dolorEspalda3 text, dolorEspalda4 text, dolorEspalda5 text, dolorEspalda6 text, dolorEspalda7 text, adormeMano text, adormeMano2 text, adormeMano3 text, adormeMano4 text, adormeMano5 text, adormeMano6 text, adormeMano7 text, dismiMovMano text, dismiMovMano2 text, dismiMovMano3 text, dismiMovMano4 text, dismiMovMano5 text, dismiMovMano6 text, dismiMovMano7 text, perdidaFuMano text, perdidaFuMano2 text, perdidaFuMano3 text, perdidaFuMano4 text, perdidaFuMano5 text, perdidaFuMano6 text, perdidaFuMano7 text, torpeMano text, torpeMano2 text, torpeMano3 text, torpeMano4 text, torpeMano5 text, torpeMano6 text, torpeMano7 text, senExMano text, senExMano2 text, senExMano3 text, senExMano4 text, senExMano5 text, senExMano6 text, senExMano7 text, otrosMole text, obserDefor text, obserInf text, obserAtro text, obserCam text, dmMusBrazoDer text, dmMusBrazoIzq text, dmMusAnBrazoDer text, dmMusAnBrazoIzq text, rMFleCD text, rMFleCI text, rMFleHD text, rMFleHI text, rMFleCoD text, rMFleCoI text, rMFleMD text, rMFleMI text, rMFleDD text, rMFleDI text, rMExtCD text, rMExtCI text, rMExtHD text, rMExtHI text, rMExtCoD text, rMExtCoI text,  rMExtMD text, rMExtMI text, rMExtDD text, rMExtDI text, rMAdbCD text, rMAdbCI text, rMAdbHD text, rMAdbHI text, rMAdbCoD text, rMAdbCoI text, rMAdbMD text, rMAdbMI text, rMAdbDD text, rMAdbDI text, rMAduCD text, rMAduCI text, rMAduHD text, rMAduHI text, rMAduCoD text, rMAduCoI text, rMAduMD text, rMAduMI text, rMAduDD text, rMAduDI text, rMRotExtCD text, rMRotExtCI text, rMRotExtHD text, rMRotExtHI text, rMRotExtCoD text, rMRotExtCoI text, rMRotExtMD text, rMRotExtMI text, rMRotExtDD text, rMRotExtDI text, rMRotInCD text, rMRotInCI text, rMRotInHD text, rMRotInHI text, rMRotInCoD text, rMRotInCoI text, rMRotInMD text, rMRotInMI text, rMRotInDD text, rMRotInDI text, rFMPrePalmaD text, rFMPrePalmaI text, rFMPreDigD text, rFMPreDigI text, rSenPMonoD text, rSenPMonoI text, rSenVibroD text, rSenVibroI text, rSenDisD text, rSenDisI text, sESFlickD text, sESFlickI text, sESPhallenD text, sESPhallenI text, sESTinelD text, sESTinelI text, sESCirculoD text, sESCirculoI text, eCerviRes text, eCerviTRes text, eCerviOcc text, eCerviC1 text, eCerviC2 text, eCerviC3 text, eCerviC4 text, eCerviC5 text, eCerviC6 text, eCerviC7 text, eDorsPiRod text, eDorsPreDir text, eDorsPreLat text, eDorsPreAD text, eIliacosTPie text, eIliacosTPos text, eIliacosEias text, eIliacosTAlar text, eIliacosTAcor text, eSacroTArSen text, eSacroTRot text, eSacroTLat text, eSacroTAcor text, eLumbarPiRod text, eLumbarPreDir text, eLumbarPreLat text, eLumbarPreAD text)')
         print('Table Creado')
         pass
-  
-        
+
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
