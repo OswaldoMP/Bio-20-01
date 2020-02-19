@@ -68,6 +68,8 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
                 "Registro No Encontrado.",
                 QMessageBox.Ok )
                 self.clearForm()
+                self.iBuscarName.setText('')
+
 
     def updateId(self):
         global dataBase, connectDB
@@ -104,7 +106,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
                 dataBase.execute(sql)
                 connectDB.commit()
                 self.clearForm()
-                self.bBuscar.setText('')
+                self.iBuscarName.setText('')
                 confirmation = QMessageBox.question(self, "Aviso",
                 "Registro Eliminado.",
                 QMessageBox.Ok )
@@ -118,6 +120,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
             confirmation = QMessageBox.question(self, "Aviso",
             "No hay registro que eliminar. \n Busque un registro.",
             QMessageBox.Ok )
+            self.iBuscarName.setText('')
 
         pass
 
