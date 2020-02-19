@@ -50,11 +50,12 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
         global dataBase, connectDB
         bandera = True
         register = self.iBuscarName.text()
+        
         # Busquda por nombre, Descomentar
         sql = 'SELECT * FROM users WHERE name = ' +"'"+register +"'"
 
         # Busqueda por Id, folio, Descomenar
-        # sql = 'SELECT * FROM users WHERE name = ' +register
+        # sql = 'SELECT * FROM users WHERE id = ' +register
         data = self.selectId(dataBase,connectDB,sql)
         try:
             if data[0]:
@@ -84,6 +85,7 @@ class MainWindow(QtWidgets.QMainWindow,Ui_MainWindow):
             confirmation = QMessageBox.question(self, "Aviso",
             "Registro Actualizado.",
             QMessageBox.Ok )
+            self.toolBox.setCurrentIndex(2)
             
         else:
             confirmation = QMessageBox.question(self, "Aviso",
