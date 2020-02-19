@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Principal</class>
+ <widget class="QMainWindow" name="Principal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1004</width>
+    <height>555</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>-154</x>
+         <y>-3</y>
+         <width>1124</width>
+         <height>680</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QGridLayout" name="_2">
+        <item row="3" column="0" colspan="3">
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>ÁREA DE TRABAJO:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_9"/>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>GÉNERO: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox">
+            <item>
+             <property name="text">
+              <string>Masculino.</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Femenino.</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>EDAD:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_3"/>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="5">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>KG.</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="4">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>NOMBRE DEL TRABAJADOR:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit"/>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="4">
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>PESO:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_6">
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="frame">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <item>
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>HABITOS:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_11"/>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0" colspan="10">
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="label_2">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="accessibleDescription">
+            <string/>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 9pt &quot;Roboto&quot;;
+</string>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Datos personales.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="Line" name="line">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item row="15" column="4">
+         <widget class="QSplitter" name="splitter_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="label_4">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>241</width>
+             <height>68</height>
+            </size>
+           </property>
+           <property name="accessibleDescription">
+            <string/>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 9pt &quot;Roboto&quot;;
+</string>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;EXPLORACIÓN FISICA &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;OBSERVACIÓN.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="tableWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>244</width>
+             <height>144</height>
+            </size>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>26</number>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>DEFORMIDADES.</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>INFLAMACIONES.</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>ATROFIA.</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>CAMBIOS DE COLORACIÓN.</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>SI.</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>NO.</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string notr="true"/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="2" column="1">
+            <property name="text">
+             <string notr="true"/>
+            </property>
+            <property name="toolTip">
+             <string notr="true"/>
+            </property>
+            <property name="whatsThis">
+             <string notr="true"/>
+            </property>
+            <property name="font">
+             <font>
+              <kerning>false</kerning>
+             </font>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="3" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="whatsThis">
+             <string>asdf</string>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </item>
+        <item row="3" column="3" colspan="5">
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string>TIEMPO LABORANDO:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_10"/>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="8">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>AÑOS.</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="7" colspan="2">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>HORAS.</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0" colspan="10">
+         <layout class="QHBoxLayout" name="horizontalLayout_14">
+          <item>
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>MEDICAMENTOS QUE HAYA INGERIDO DESDE LA NOCHE ANTERIOR:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_14"/>
+          </item>
+         </layout>
+        </item>
+        <item row="7" column="0" colspan="10">
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>HA PRESENTADO ALGUNA DE LAS SIGUIENTES  MOLESTIAS EN EL ULTIMO MES                 ¿CUÁL (es)?</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2" colspan="6">
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <item>
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>ACTIVIDAD:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_12"/>
+          </item>
+         </layout>
+        </item>
+        <item row="5" column="0" colspan="7">
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>TIEMPO QUE PERMANECERA CON EL RIESGO POTENCIAL:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_13"/>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="9">
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_10">
+            <property name="text">
+             <string>HORA:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTimeEdit" name="timeEdit">
+            <property name="displayFormat">
+             <string>HH:mm</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="2" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>FECHA: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="dateEdit">
+            <property name="displayFormat">
+             <string>dd/MM/yyyy</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="8" column="0" rowspan="7" colspan="6">
+         <widget class="QTableWidget" name="tableWidget">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>731</width>
+            <height>190</height>
+           </size>
+          </property>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>5</number>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>63</number>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>24</number>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>DOLOR DE MANO.</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>DOLOR DE CUELLO.</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>DOLOR DE HOMBRO Y/O CODO.</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>DOLOR DE ESPALDA.</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>ADORMECIMIENTO DE MANOS.</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>DISMINUCIÓN  EN LA MOVILIDAD DE LAS MANOS.</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>PÉRDIDA DE FUERZA EN LAS MANOS.</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>TORPEZA DE MOVIMIENTOS DE LA MANO.</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>SENSACIONES EXTRAÑAS EN LA MANO.</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>OTROS:</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string notr="true">Derecho.</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Izquierdo.</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Intens.</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Fcia.</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Local.</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Irrad</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="4">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="5">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="1" column="2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="1" column="3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="1" column="4">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="1" column="5">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="2" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="2" column="1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="2" column="2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="2" column="3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="2" column="4">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="2" column="5">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="3" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="3" column="1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="3" column="2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="3" column="3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="3" column="4">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="3" column="5">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="4" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="4" column="1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="4" column="2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="4" column="3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="4" column="4">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="4" column="5">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="5" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="5" column="1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="5" column="2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="5" column="3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="5" column="4">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="5" column="5">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="6" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="6" column="1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="6" column="2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="6" column="3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="6" column="4">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="6" column="5">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="7" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="7" column="1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="7" column="2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="7" column="3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="7" column="4">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="7" column="5">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="8" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="8" column="1">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="8" column="2">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="8" column="3">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="8" column="4">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="8" column="5">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="10" column="7">
+         <widget class="QSplitter" name="splitter_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QLabel" name="label_21">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>256</width>
+             <height>37</height>
+            </size>
+           </property>
+           <property name="accessibleDescription">
+            <string/>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font: 9pt &quot;Roboto&quot;;
+</string>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;DIAMETRO MUSCULAR.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="tableWidget_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>255</width>
+             <height>133</height>
+            </size>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>26</number>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>DEFORMIDADES.</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>INFLAMACIONES.</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>ATROFIA.</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>CAMBIOS DE COLORACIÓN.</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>SI.</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>NO.</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string notr="true"/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="2" column="1">
+            <property name="text">
+             <string notr="true"/>
+            </property>
+            <property name="toolTip">
+             <string notr="true"/>
+            </property>
+            <property name="whatsThis">
+             <string notr="true"/>
+            </property>
+            <property name="font">
+             <font>
+              <kerning>false</kerning>
+             </font>
+            </property>
+            <property name="textAlignment">
+             <set>AlignCenter</set>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="3" column="1">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="whatsThis">
+             <string>asdf</string>
+            </property>
+            <property name="checkState">
+             <enum>Unchecked</enum>
+            </property>
+            <property name="flags">
+             <set>ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </item>
+        <item row="2" column="6" colspan="2">
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <property name="rightMargin">
+           <number>152</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>TALLA:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_2">
+            <item>
+             <property name="text">
+              <string>CH.</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MD.</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GD.</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>XGD.</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1004</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
